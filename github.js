@@ -11,6 +11,17 @@ fetch('https://api.github.com/users/edgerees')
 console.log(githubDate); //console log displays the data.
 })
 
+
+.then(githubDate => {
+   const edgereesObj= {
+       bio: githubDate.bio,
+       username: githubDate.login,
+       name:githubDate.name
+   }
+   console.log(edgereesObj);
+
+    })
+    
 // check error, only runws if there is an error, console log will show "error"
 .catch(error=> {
     console.log(error);
